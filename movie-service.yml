@@ -1,6 +1,11 @@
 spring:
   application:
     name: movie-service
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
   datasource:
     driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/movie_database
@@ -15,6 +20,12 @@ spring:
     hibernate:
       ddlAuto: create-drop
 
+queue: #new
+  movies: #new
+    name: MoviesQueue #new
+    
+message: registro up #new
+    
 server:
   port: 8061
 
