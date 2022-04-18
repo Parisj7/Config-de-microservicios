@@ -21,7 +21,7 @@ spring:
       ddlAuto: create-drop
 
 queue: #new
-  movies: #new
+  movie: #new
     name: MoviesQueue #new
     
 message: registro up #new
