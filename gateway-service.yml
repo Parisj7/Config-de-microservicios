@@ -23,7 +23,21 @@ spring:
           uri: lb://series-service
           predicates:
             - Path=/series/**
-
+        
+      default-filters:
+        - OIDCTokenRelay
+  security:
+    oauth2:
+      client:
+        provider:
+          google:
+            issuer-uri: https://accounts.google.com
+        registration:
+          google:
+            client-id: 434486774792-qfde7n93i33bfh5j4fqga3rlou4q471i.apps.googleusercontent.com
+            client-secret: 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
+            scope: openid
+            redirect_uri: http://localhost:8080/login/oauth2/code/google
 
 server:
   port: 8080
